@@ -37,7 +37,7 @@ jobs:
       - name: Get version from manifest
         id: manifest
         run: |
-          VERSION=$(node -p "require('./manifest.json').version")
+          VERSION=$(node -p "require('./src/manifest.json').version")
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Create Release
