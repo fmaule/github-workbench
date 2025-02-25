@@ -1,5 +1,3 @@
-import { SELECTOR } from "./selectors";
-
 function createBranchButtonElement() {
   const iconSpan = document.createElement("span");
   iconSpan.id = "branch-name-button";
