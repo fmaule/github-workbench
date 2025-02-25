@@ -1,0 +1,25 @@
+{
+  "name": "github-workbench",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "rollup -c -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "rollup": "^4.34.8",
+    "rollup-plugin-chrome-extension": "^3.6.12"
+  },
+  "dependencies": {
+    "@rollup/plugin-typescript": "^12.1.2"
+  }
+}

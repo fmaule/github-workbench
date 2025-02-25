@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Workbench",
+  "version": "1.0.0",
+  "description": "GitHub Workbench - tools for developers",
+  "permissions": ["clipboardWrite", "activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.ts"]
+    }
+  ]
+}
