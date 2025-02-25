@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "GitHub Workbench",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "GitHub Workbench - tools for developers",
   "permissions": ["clipboardWrite", "activeTab", "scripting"],
   "content_scripts": [
@@ -9,5 +9,9 @@
       "matches": ["https://github.com/*"],
       "js": ["content.ts"]
     }
-  ]
+  ],
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
 }
