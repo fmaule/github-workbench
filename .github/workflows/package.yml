@@ -34,15 +34,17 @@ jobs:
           name: chrome-extension
           path: package/*.zip
 
-      - name: Get current date
-        id: date
-        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+      - name: Get version from manifest
+        id: manifest
+        run: |
+          VERSION=$(node -p "require('./manifest.json').version")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          name: Release ${{ steps.date.outputs.date }}
-          tag_name: release-${{ steps.date.outputs.date }}
+          name: Release v${{ steps.manifest.outputs.version }}
+          tag_name: v${{ steps.manifest.outputs.version }}
           files: package/*.zip
           generate_release_notes: true
         env:
