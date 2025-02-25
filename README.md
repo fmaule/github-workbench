@@ -12,7 +12,7 @@ A Chrome extension that streamlines GitHub development workflows by providing sm
 ## Installation Steps
 
 1. Download the extension
-   - Go to the [Releases](https://github.com/yourusername/yourrepo/releases) page
+   - Go to the [Releases](https://github.com/fmaule/github-workbench/releases) page
    - Download the latest release ZIP file
 
 2. Unzip the extension
