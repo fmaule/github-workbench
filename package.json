@@ -5,21 +5,21 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c",
+    "build": "npm run check && rollup -c",
     "dev": "rollup -c -w",
-    "start": "rollup -c -w"
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "lint:apply": "biome lint --write .",
+    "check": "biome check ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@rollup/plugin-commonjs": "^28.0.2",
-    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@biomejs/biome": "^1.9.4",
+    "@rollup/plugin-typescript": "^12.1.2",
     "rollup": "^4.34.8",
     "rollup-plugin-chrome-extension": "^3.6.12"
-  },
-  "dependencies": {
-    "@rollup/plugin-typescript": "^12.1.2"
   }
 }

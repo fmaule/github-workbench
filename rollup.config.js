@@ -1,15 +1,11 @@
-import { chromeExtension, simpleReloader } from 'rollup-plugin-chrome-extension'
-import typescript from '@rollup/plugin-typescript'
+import typescript from "@rollup/plugin-typescript";
+import { chromeExtension, simpleReloader } from "rollup-plugin-chrome-extension";
 
 export default {
-  input: 'src/manifest.json',
+  input: "src/manifest.json",
   output: {
-    dir: 'dist',
-    format: 'esm',
+    dir: "dist",
+    format: "esm",
   },
-  plugins: [
-    chromeExtension(),
-    simpleReloader(),
-    typescript(),
-  ],
-}
+  plugins: [chromeExtension(), simpleReloader(), typescript()],
+};

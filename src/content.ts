@@ -1,5 +1,5 @@
-import { SELECTOR } from "./selectors";
 import createBranchButtonElement from "./branch-button";
+import { SELECTOR } from "./selectors";
 
 function getIssueDetails(): { id: string; title: string } | undefined {
   const titleElement = document.querySelector(SELECTOR.issueTitle);
@@ -17,12 +17,15 @@ function getIssueDetails(): { id: string; title: string } | undefined {
 }
 
 function generateBranchName(title: string, id: string): string {
-  const branchName = `${id}-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").substring(0, 50)}`;
+  const branchName = `${id}-${title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .substring(0, 50)}`;
   return branchName;
 }
 
 function copyToClipboard(text: string) {
-  navigator.clipboard.writeText(text)
+  navigator.clipboard.writeText(text);
 }
 
 function injectBranchNameButton(authorBoxContainer: HTMLElement): void {
@@ -41,7 +44,7 @@ function injectBranchNameButton(authorBoxContainer: HTMLElement): void {
 }
 
 const observer = new MutationObserver(() => {
-  const authorElement = document.querySelector(SELECTOR.issueBodyHeaderAuthor)
+  const authorElement = document.querySelector(SELECTOR.issueBodyHeaderAuthor);
   if (authorElement?.parentElement?.parentElement && !document.querySelector(SELECTOR.branchNameSpan)) {
     const authorBoxContainer = authorElement.parentElement.parentElement;
     injectBranchNameButton(authorBoxContainer);

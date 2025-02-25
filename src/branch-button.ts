@@ -42,22 +42,22 @@ function createBranchButtonElement() {
   wrapper.appendChild(tooltip);
 
   iconSpan.addEventListener("mouseenter", () => {
-    iconSpan.style.backgroundColor = 'rgba(175, 184, 193, 0.2)';
+    iconSpan.style.backgroundColor = "rgba(175, 184, 193, 0.2)";
     const rect = iconSpan.getBoundingClientRect();
-    tooltip.style.display = 'block';
-    tooltip.style.left = `${rect.left + (rect.width / 2)}px`;
+    tooltip.style.display = "block";
+    tooltip.style.left = `${rect.left + rect.width / 2}px`;
     tooltip.style.top = `${rect.top - 40}px`;
-    tooltip.style.transform = 'translateX(-50%)';
+    tooltip.style.transform = "translateX(-50%)";
     requestAnimationFrame(() => {
-      tooltip.style.opacity = '1';
+      tooltip.style.opacity = "1";
     });
   });
 
   iconSpan.addEventListener("mouseleave", () => {
-    iconSpan.style.backgroundColor = 'transparent';
-    tooltip.style.opacity = '0';
+    iconSpan.style.backgroundColor = "transparent";
+    tooltip.style.opacity = "0";
     setTimeout(() => {
-      tooltip.style.display = 'none';
+      tooltip.style.display = "none";
     }, 200);
   });
 
